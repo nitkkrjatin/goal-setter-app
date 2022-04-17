@@ -7,7 +7,8 @@
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "nitkkrjatin",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "express": "^4.17.3",
     "express-async-handler": "^1.2.0",
     "git": "^0.1.5",
+    "heroku": "^7.60.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.8"
   },
